@@ -87,7 +87,6 @@
           <img src="../assets/bombay.jpg" alt="" />
           <h2>5. Bombay</h2>
         </div>
-        <hr />
       </div>
     </div>
     <hr />
@@ -178,6 +177,16 @@
           - Some cats can swim.
           <br />
         </p>
+        <br />
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/2w00lGT_m4w"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </div>
@@ -200,7 +209,7 @@ export default {
 
 <style scoped>
 img {
-  height: 200px;
+  height: 250px;
   margin: 5px;
 }
 
@@ -210,10 +219,11 @@ img {
 }
 
 p {
-  margin: 25px;
+  margin: 35px;
 }
 
 .link {
   cursor: pointer;
+  width: 550px;
 }
 </style>

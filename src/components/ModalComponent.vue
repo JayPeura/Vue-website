@@ -1,12 +1,3 @@
-<script>
-export default {
-  name: "ModalComponent",
-  props: {
-    show: Boolean,
-  },
-};
-</script>
-
 <template>
   <Transition name="modal">
     <div v-if="show" class="modal-mask">
@@ -28,6 +19,15 @@ export default {
     </div>
   </Transition>
 </template>
+
+<script>
+export default {
+  name: "ModalComponent",
+  props: {
+    show: Boolean,
+  },
+};
+</script>
 
 <style scoped>
 .modal-mask {
@@ -55,6 +55,7 @@ export default {
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
+  text-align: center;
 }
 .modal-body {
   margin: 20px 0;

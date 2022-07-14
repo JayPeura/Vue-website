@@ -24,7 +24,6 @@ export default {
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
-
   margin: 60px;
 }
 </style>
