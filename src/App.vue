@@ -1,29 +1,46 @@
 <template>
-  <MainCard />
+  <div class="app">
+    <SideBar />
+    <router-view />
+  </div>
 </template>
 
-<script>
-import MainCard from "./components/MainCard.vue";
-
-export default {
-  name: "App",
-  components: {
-    MainCard,
-  },
-};
+<script setup>
+import SideBar from "./components/SideBar.vue";
 </script>
 
-<style>
+<style lang="scss">
+:root {
+  --sidebar-width: 300px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira sans", sans-serif;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #6b0000;
-  background-color: rgb(255, 228, 228);
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
-  margin: 60px;
+}
+
+button {
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.app {
+  display: flex;
+  main {
+    flex: 1 1 0;
+    padding: 2rem;
+    @media (max-width: 1024px) {
+      padding-left: 6rem;
+    }
+  }
 }
 </style>
