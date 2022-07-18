@@ -5,11 +5,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/",
+      path: "/Vue-website/",
       component: MainCard,
     },
     {
-      path: "/list",
+      path: "/Vue-website/list/",
       component: () => import("../views/List.vue"),
     },
   ],

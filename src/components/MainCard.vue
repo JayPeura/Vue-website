@@ -120,10 +120,14 @@ img {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
   margin: 60px;
   color: #6b0000;
-  background-color: rgb(255, 228, 228);
+  background-color: rgb(255, 240, 240);
   text-align: center;
   max-width: 80vw;
   min-width: 80vw;
+}
+
+.container-two:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.33);
 }
 
 p {

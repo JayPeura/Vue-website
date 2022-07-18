@@ -13,11 +13,11 @@
     <h3>Menu</h3>
 
     <div class="menu">
-      <router-link class="button" to="/">
+      <router-link class="button" to="/Vue-website/">
         <span class="material-symbols-rounded">home</span>
         <span class="text">Home</span>
       </router-link>
-      <router-link class="button" to="/List">
+      <router-link class="button" to="/Vue-website/list">
         <span class="material-symbols-rounded">pets</span>
         <span class="text">Cat breeds</span>
       </router-link>

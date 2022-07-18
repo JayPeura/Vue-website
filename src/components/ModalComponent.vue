@@ -56,6 +56,8 @@ export default {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
   text-align: center;
+  color: rgb(100, 0, 0);
+  font-family: Lato;
 }
 .modal-body {
   margin: 20px 0;

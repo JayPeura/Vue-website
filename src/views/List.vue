@@ -84,25 +84,33 @@
             </modal>
           </Teleport>
         </div>
+        <br />
         <hr />
+        <br />
         <div @click="showModal = true" class="link">
           <img src="../assets/mainecoon.jpg" alt="" />
 
           <h2>2. Maine Coon</h2>
         </div>
+        <br />
         <hr />
+        <br />
 
         <div @click="showModal = true" class="link">
           <img src="../assets/ragdoll.jpg" alt="" />
           <h2>3. Ragdoll</h2>
         </div>
+        <br />
         <hr />
+        <br />
 
         <div @click="showModal = true" class="link">
           <img src="../assets/nfc.jpg" alt="" />
           <h2>4. Norwegian Forest cat</h2>
         </div>
+        <br />
         <hr />
+        <br />
 
         <div @click="showModal = true" class="link">
           <img src="../assets/bombay.jpg" alt="" />
@@ -110,6 +118,7 @@
         </div>
       </div>
     </div>
+    <button @click="backToTop" class="backToTop">Back to top</button>
   </div>
 </template>
 
@@ -126,6 +135,17 @@ export default {
       showModal: false,
     };
   },
+  methods: {
+    backToTop() {
+      let to = this.moveToDown ? this.$refs.description.offsetTop - 60 : 0;
+
+      window.scroll({
+        top: to,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+  },
 };
 </script>
 
@@ -136,14 +156,43 @@ export default {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33);
   margin: 60px;
   color: #6b0000;
-  background-color: rgb(255, 228, 228);
+  background-color: rgb(255, 240, 240);
   text-align: center;
   max-width: 80vw;
   min-width: 80vw;
 }
 
+.container-one:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.33);
+}
+
 img {
   width: 700px;
   padding: 15px;
+}
+
+button {
+  width: 75px;
+  display: flex;
+  height: 25px;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: rgb(255, 181, 181);
+  border: 2px solid rgba(0, 0, 0, 0.33);
+  border-radius: 3px;
+  margin: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
+}
+
+button:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.582);
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: darkred;
 }
 </style>
