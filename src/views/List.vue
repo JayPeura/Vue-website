@@ -1,6 +1,19 @@
 <template>
   <div>
     <div class="container-one">
+      <span
+        class="material-icons-two-tone"
+        @click="toggleTheme"
+        style="
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          position: relative;
+          top: 1vh;
+          left: 38.3vw;
+        "
+        >{{ mode }}</span
+      >
       <div class="breed-list">
         <h2>My top 5 cat breeds</h2>
         <p>And what's up with them</p>
@@ -130,6 +143,10 @@ export default {
   components: {
     Modal,
   },
+  props: {
+    mode: String,
+    toggleTheme: Function,
+  },
   data() {
     return {
       showModal: false,
@@ -149,7 +166,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container-one {
   padding: 10px;
   border-radius: 15px;
@@ -160,6 +177,17 @@ export default {
   text-align: center;
   max-width: 80vw;
   min-width: 80vw;
+}
+
+.light_mode {
+  .container-one {
+    background-color: #330f0f;
+    color: rgb(255, 240, 240);
+  }
+
+  .material-icons-two-tone {
+    filter: invert(1);
+  }
 }
 
 .container-one:hover {

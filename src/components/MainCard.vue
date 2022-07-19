@@ -1,6 +1,19 @@
 <template>
   <div class="main-container">
     <div class="container-two">
+      <span
+        class="material-icons-two-tone"
+        @click="toggleTheme"
+        style="
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          position: relative;
+          top: 1vh;
+          left: 38.3vw;
+        "
+        >{{ mode }}</span
+      >
       <div class="about-cats">
         <h1>Cats in general</h1>
         <p>
@@ -106,10 +119,14 @@
 <script>
 export default {
   name: "MainCard",
+  props: {
+    mode: String,
+    toggleTheme: Function,
+  },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 img {
   height: 250px;
   margin: 5px;
@@ -126,6 +143,16 @@ img {
   min-width: 80vw;
 }
 
+.light_mode {
+  .container-two {
+    background-color: #330f0f;
+    color: rgb(255, 240, 240);
+  }
+
+  .material-icons-two-tone {
+    filter: invert(1);
+  }
+}
 .container-two:hover {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.33);
 }

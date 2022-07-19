@@ -1,20 +1,7 @@
 <template>
   <div class="app" :class="mode">
     <SideBar />
-    <span
-      class="material-icons-two-tone"
-      @click="toggleTheme"
-      style="
-        cursor: pointer;
-        width: 30px;
-        height: 30px;
-        position: fixed;
-        left: 89.7rem;
-        top: 4.1rem;
-      "
-      >{{ mode }}</span
-    >
-    <router-view />
+    <router-view v-bind="myProps" />
   </div>
 </template>
 
@@ -24,6 +11,11 @@ export default {
   name: "App",
   components: {
     SideBar,
+  },
+  computed: {
+    myProps() {
+      return { mode: this.mode, toggleTheme: this.toggleTheme };
+    },
   },
   data() {
     return {
@@ -78,10 +70,6 @@ button {
 }
 
 .light_mode {
-  background-color: rgb(63, 0, 0);
-
-  .material-icons {
-    color: white;
-  }
+  background-color: rgb(39, 14, 14);
 }
 </style>
