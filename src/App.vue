@@ -1,6 +1,19 @@
 <template>
   <div class="app" :class="mode">
     <SideBar />
+    <span
+      class="material-icons-two-tone"
+      @click="toggleTheme"
+      style="
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 1vh;
+        right: 0.5vw;
+      "
+      >{{ mode }}</span
+    >
     <router-view v-bind="myProps" />
   </div>
 </template>
@@ -43,7 +56,26 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: Lato;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(218, 181, 181);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(104, 0, 0);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(73, 0, 0);
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,5 +103,8 @@ button {
 
 .light_mode {
   background-color: rgb(39, 14, 14);
+  .material-icons-two-tone {
+    filter: invert(1);
+  }
 }
 </style>

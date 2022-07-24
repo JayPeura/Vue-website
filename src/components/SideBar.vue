@@ -21,6 +21,10 @@
         <span class="material-symbols-rounded">pets</span>
         <span class="text">Cat breeds</span>
       </router-link>
+      <router-link class="button" to="/Vue-website/quiz/">
+        <span class="material-symbols-rounded">quiz</span>
+        <span class="text">Cat quiz</span>
+      </router-link>
     </div>
   </aside>
 </template>
@@ -133,7 +137,8 @@ aside {
     z-index: 99;
   }
   &.is-expanded {
-    width: 500px;
+    width: 200px;
+    max-width: 200px;
 
     .menu-toggle-wrap {
       top: -3rem;

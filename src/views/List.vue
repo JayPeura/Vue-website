@@ -1,19 +1,6 @@
 <template>
   <div>
     <div class="container-one">
-      <span
-        class="material-icons-two-tone"
-        @click="toggleTheme"
-        style="
-          cursor: pointer;
-          width: 30px;
-          height: 30px;
-          position: relative;
-          top: 1vh;
-          left: 38.3vw;
-        "
-        >{{ mode }}</span
-      >
       <div class="breed-list">
         <h2>My top 5 cat breeds</h2>
         <p>And what's up with them</p>

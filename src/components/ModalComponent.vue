@@ -58,6 +58,25 @@ export default {
   text-align: center;
   color: rgb(100, 0, 0);
   font-family: Lato;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.modal-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .modal-container {
+    width: 80vw;
+    height: 80vh;
+  }
+}
+@media (max-height: 800px) {
+  .modal-container {
+    width: 80vw;
+    height: 80vh;
+  }
 }
 .modal-body {
   margin: 20px 0;
