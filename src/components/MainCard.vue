@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div class="main-container" style="margin: 0 0 0 120px; overflow-x: hidden">
     <div class="container-two">
       <div class="about-cats">
         <h1>Cats in general</h1>

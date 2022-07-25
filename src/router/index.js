@@ -20,6 +20,10 @@ const router = createRouter({
       path: "/Vue-website/quiz/reward",
       component: () => import("../views/QuizReward.vue"),
     },
+    {
+      path: "/Vue-website/profile/",
+      component: () => import("../views/ProfileView.vue"),
+    },
   ],
 });
 

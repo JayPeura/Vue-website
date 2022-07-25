@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-container" style="margin: 0 0 0 120px; overflow-x: hidden">
     <div class="container-one">
       <div class="breed-list">
         <h2>My top 5 cat breeds</h2>

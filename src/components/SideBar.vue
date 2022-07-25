@@ -25,6 +25,10 @@
         <span class="material-symbols-rounded">quiz</span>
         <span class="text">Cat quiz</span>
       </router-link>
+      <router-link class="button" to="/Vue-website/profile/">
+        <span class="material-symbols-rounded">person</span>
+        <span class="text">GitHub search</span>
+      </router-link>
     </div>
   </aside>
 </template>
@@ -47,8 +51,13 @@ aside {
   min-height: 100vh;
   overflow: hidden;
   padding: 1rem;
-
-  background-color: rgb(94, 0, 0);
+  background: rgb(36, 0, 0);
+  background: linear-gradient(
+    315deg,
+    rgba(36, 0, 0, 1) 0%,
+    rgba(121, 9, 9, 1) 74%
+  );
+  position: fixed;
   color: rgb(255, 234, 234);
 
   transition: 0.2s ease-in-out;
