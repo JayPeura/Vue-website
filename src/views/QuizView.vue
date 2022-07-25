@@ -64,6 +64,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
+import router from "../router/index";
 
 const questions = ref([
   {
@@ -82,6 +83,16 @@ const questions = ref([
     question: "Where do the cats originate from?",
     answer: 2,
     options: ["Europe", "America", "Africa", "Australia"],
+    selected: null,
+  },
+  {
+    question: "When do cats usually have kittens?",
+    answer: 0,
+    options: [
+      "Spring to late autumn",
+      "Winter to spring",
+      "Summer to late winter",
+    ],
     selected: null,
   },
 ]);
@@ -114,6 +125,14 @@ const NextQuestion = () => {
     currentQuestion.value++;
   } else {
     quizCompleted.value = true;
+    if (score.value === questions.value.length) {
+      alert(
+        "You got all the answers correctly! Here's your reward: use the word 'catto' in jaypeura.github.io/Vue-website/quiz/reward/"
+      );
+      setTimeout(() => {
+        router.replace({ path: "/Vue-website/quiz/reward" });
+      }, 1000);
+    }
   }
 };
 </script>
@@ -137,6 +156,7 @@ const NextQuestion = () => {
   width: 100%;
   max-width: 640px;
   border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.555);
 }
 
 .quiz-info {

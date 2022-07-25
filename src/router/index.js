@@ -16,6 +16,10 @@ const router = createRouter({
       path: "/Vue-website/quiz/",
       component: () => import("../views/QuizView.vue"),
     },
+    {
+      path: "/Vue-website/quiz/reward",
+      component: () => import("../views/QuizReward.vue"),
+    },
   ],
 });
 
