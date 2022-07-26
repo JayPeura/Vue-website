@@ -197,7 +197,8 @@ button {
   background-color: rgb(255, 181, 181);
   border: 2px solid rgba(0, 0, 0, 0.33);
   border-radius: 3px;
-  margin: 10px;
+  margin-left: 90rem;
+  margin-bottom: 30px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
 }
 

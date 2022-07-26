@@ -24,6 +24,10 @@ const router = createRouter({
       path: "/Vue-website/profile/",
       component: () => import("../views/ProfileView.vue"),
     },
+    {
+      path: "/Vue-website/random/",
+      component: () => import("../views/RandomView.vue"),
+    },
   ],
 });
 

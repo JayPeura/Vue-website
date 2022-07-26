@@ -58,6 +58,7 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  margin-left: 15rem;
   height: 100vh;
 }
 

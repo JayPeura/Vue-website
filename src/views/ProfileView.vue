@@ -44,7 +44,9 @@
             <br />
             <br />
 
-            <a v-if="show" :href="github">Click here for the GitHub page</a>
+            <a v-if="show" :href="github" target="_blank"
+              >Click here for the GitHub page</a
+            >
           </div>
         </div>
       </main>

@@ -17,7 +17,7 @@
         <span class="material-symbols-rounded">home</span>
         <span class="text">Home</span>
       </router-link>
-      <router-link class="button" to="/Vue-website/list">
+      <router-link class="button" to="/Vue-website/list/">
         <span class="material-symbols-rounded">pets</span>
         <span class="text">Cat breeds</span>
       </router-link>
@@ -28,6 +28,10 @@
       <router-link class="button" to="/Vue-website/profile/">
         <span class="material-symbols-rounded">person</span>
         <span class="text">GitHub search</span>
+      </router-link>
+      <router-link class="button" to="/Vue-website/random/">
+        <span class="material-symbols-rounded">spellcheck</span>
+        <span class="text">Randomiser</span>
       </router-link>
     </div>
   </aside>
@@ -116,7 +120,7 @@ aside {
         font-size: 2rem;
         color: white;
         transition: 0.2s ease-out;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
       }
 
       .text {
