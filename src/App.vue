@@ -14,7 +14,11 @@
       "
       >{{ mode }}</span
     >
-    <router-view v-bind="myProps" />
+    <router-view v-bind="myProps" v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <Component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 
@@ -106,5 +110,15 @@ button {
   .material-icons-two-tone {
     filter: invert(1);
   }
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease-out;
 }
 </style>
