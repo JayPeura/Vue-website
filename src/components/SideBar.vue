@@ -13,25 +13,29 @@
     <h3>Menu</h3>
 
     <div class="menu">
-      <router-link class="button" to="/Vue-website/">
+      <router-link class="button" to="/">
         <span class="material-symbols-rounded">home</span>
         <span class="text">Home</span>
       </router-link>
-      <router-link class="button" to="/Vue-website/list/">
+      <router-link class="button" to="/list/">
         <span class="material-symbols-rounded">pets</span>
         <span class="text">Cat breeds</span>
       </router-link>
-      <router-link class="button" to="/Vue-website/quiz/">
+      <router-link class="button" to="/quiz/">
         <span class="material-symbols-rounded">quiz</span>
         <span class="text">Cat quiz</span>
       </router-link>
-      <router-link class="button" to="/Vue-website/profile/">
+      <router-link class="button" to="/profile/">
         <span class="material-symbols-rounded">person</span>
         <span class="text">GitHub search</span>
       </router-link>
-      <router-link class="button" to="/Vue-website/random/">
+      <router-link class="button" to="/random/">
         <span class="material-symbols-rounded">spellcheck</span>
         <span class="text">Randomiser</span>
+      </router-link>
+      <router-link class="button" to="/text-adventure/">
+        <span class="material-symbols-rounded">people</span>
+        <span class="text">Text Adventure</span>
       </router-link>
     </div>
   </aside>

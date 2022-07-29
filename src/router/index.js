@@ -1,32 +1,36 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import MainCard from "../components/MainCard.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
-      path: "/Vue-website/",
+      path: "/",
       component: MainCard,
     },
     {
-      path: "/Vue-website/list/",
+      path: "/list/",
       component: () => import("../views/List.vue"),
     },
     {
-      path: "/Vue-website/quiz/",
+      path: "/quiz/",
       component: () => import("../views/QuizView.vue"),
     },
     {
-      path: "/Vue-website/quiz/reward",
+      path: "/quiz/reward/",
       component: () => import("../views/QuizReward.vue"),
     },
     {
-      path: "/Vue-website/profile/",
+      path: "/profile/",
       component: () => import("../views/ProfileView.vue"),
     },
     {
-      path: "/Vue-website/random/",
+      path: "/random/",
       component: () => import("../views/RandomView.vue"),
+    },
+    {
+      path: "/text-adventure/",
+      component: () => import("../views/TextAdventure.vue"),
     },
   ],
 });

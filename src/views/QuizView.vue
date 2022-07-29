@@ -130,7 +130,7 @@ const NextQuestion = () => {
         "You got all the answers correctly! Here's your reward: use the word 'catto' in jaypeura.github.io/Vue-website/quiz/reward/"
       );
       setTimeout(() => {
-        router.replace({ path: "/Vue-website/quiz/reward" });
+        router.replace({ path: "/quiz/reward/" });
       }, 1000);
     }
   }
