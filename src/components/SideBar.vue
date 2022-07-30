@@ -69,6 +69,7 @@ aside {
   color: rgb(255, 234, 234);
 
   transition: 0.2s ease-in-out;
+  z-index: 99;
 
   .flex {
     flex: 1 1 0%;

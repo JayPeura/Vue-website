@@ -230,4 +230,10 @@ const NextQuestion = () => {
 .nextQuestion:disabled {
   opacity: 0.2;
 }
+
+.light_mode {
+  .quizApp {
+    color: rgb(255, 240, 240);
+  }
+}
 </style>

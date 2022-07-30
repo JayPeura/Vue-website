@@ -52,7 +52,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .quiz-reward {
   display: flex;
   flex-direction: column;
@@ -67,5 +67,11 @@ img {
   padding: 4rem;
   display: flex;
   flex-direction: column;
+}
+
+.light_mode {
+  .quiz-reward {
+    color: rgb(255, 240, 240);
+  }
 }
 </style>

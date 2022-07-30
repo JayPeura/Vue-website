@@ -47,7 +47,11 @@ export default {
   margin-top: 50px;
   color: black;
 }
-
+.light_mode {
+  .container {
+    color: rgb(255, 240, 240);
+  }
+}
 .random-word-container {
   margin: 15px;
 }
