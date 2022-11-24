@@ -1,5 +1,5 @@
 <template>
-  <aside :class="`${is_expanded && 'is-expanded'}`">
+  <aside v-on:keydown="keyboard" :class="`${is_expanded && 'is-expanded'}`">
     <div class="logo">
       <img src="../assets/logo.png" alt="Vue" />
     </div>
@@ -13,27 +13,27 @@
     <h3>Menu</h3>
 
     <div class="menu">
-      <router-link class="button" to="/">
+      <router-link class="button" to="/" id="navigation">
         <span class="material-symbols-rounded">home</span>
         <span class="text">Home</span>
       </router-link>
-      <router-link class="button" to="/list/">
+      <router-link class="button" to="/list/" id="navigation">
         <span class="material-symbols-rounded">pets</span>
         <span class="text">Cat breeds</span>
       </router-link>
-      <router-link class="button" to="/quiz/">
+      <router-link class="button" to="/quiz/" id="navigation">
         <span class="material-symbols-rounded">quiz</span>
         <span class="text">Cat quiz</span>
       </router-link>
-      <router-link class="button" to="/profile/">
+      <router-link class="button" to="/profile/" id="navigation">
         <span class="material-symbols-rounded">person</span>
         <span class="text">GitHub search</span>
       </router-link>
-      <router-link class="button" to="/random/">
+      <router-link class="button" to="/random/" id="navigation">
         <span class="material-symbols-rounded">spellcheck</span>
         <span class="text">Randomiser</span>
       </router-link>
-      <router-link class="button" to="/text-adventure/">
+      <router-link class="button" to="/text-adventure/" id="navigation">
         <span class="material-symbols-rounded">people</span>
         <span class="text">Text Adventure</span>
       </router-link>
@@ -42,13 +42,61 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const is_expanded = ref(false);
+
+const selectedIndex = ref(0);
 
 const ToggleMenu = () => {
   is_expanded.value = !is_expanded.value;
 };
+
+window.addEventListener(
+  "keydown",
+  function (e) {
+    if (
+      ["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(
+        e.code
+      ) > -1
+    ) {
+      e.preventDefault();
+    }
+  },
+  false
+);
+onMounted(() => {
+  const keyboard = (e) => {
+    switch (e.code) {
+      case "ArrowLeft":
+        is_expanded.value = !is_expanded.value;
+        break;
+      case "ArrowRight":
+        is_expanded.value = false;
+        break;
+      case "ArrowUp":
+      case "ArrowDown": {
+        if (!is_expanded.value) {
+          is_expanded.value = true;
+          break;
+        }
+        const newValue =
+          selectedIndex.value + (e.code === "ArrowDown" ? 1 : -1);
+        if (newValue >= 0 && newValue < 6) {
+          selectedIndex.value = newValue;
+          document.querySelectorAll("#navigation")[selectedIndex.value].focus();
+        }
+
+        break;
+      }
+    }
+  };
+  window.addEventListener("keydown", keyboard);
+
+  return () => {
+    window.removeEventListener("keydown", keyboard);
+  };
+});
 </script>
 
 <style lang="scss" scoped>
